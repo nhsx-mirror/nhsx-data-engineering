@@ -1,26 +1,34 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8">
-  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>Changelog &mdash; NHSX Data Engineering 0.0.1 documentation</title>
   
 
   
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
+
+  
   
     <link rel="shortcut icon" href="_static/favicon.png"/>
   
+
   
   
 
   
-  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
@@ -33,11 +41,6 @@
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="prev" title="Paragraph Level Markup" href="installation.html" /> 
@@ -84,6 +87,7 @@
           
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
             
@@ -91,15 +95,15 @@
               
             
             
-              <p><span class="caption-text">Introduction</span></p>
+              <p class="caption"><span class="caption-text">Introduction</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="home.html">Home</a></li>
 </ul>
-<p><span class="caption-text">Main Documentation</span></p>
+<p class="caption"><span class="caption-text">Main Documentation</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Paragraph Level Markup</a></li>
 </ul>
-<p><span class="caption-text">Appendix</span></p>
+<p class="caption"><span class="caption-text">Appendix</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#master">master</a></li>
@@ -172,6 +176,7 @@
             
           
         </div>
+        
       </div>
     </nav>
 
@@ -206,18 +211,20 @@
 
 
 
+
+
 <div role="navigation" aria-label="breadcrumbs navigation">
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="index.html">Docs</a> &raquo;</li>
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
       <li>Changelog</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
-            
+          
             <a href="_sources/changelog.rst.txt" rel="nofollow"> View page source</a>
           
         
@@ -231,12 +238,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="changelog">
+  <div class="section" id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
-<section id="master">
+<div class="section" id="master">
 <h2>master<a class="headerlink" href="#master" title="Permalink to this headline">¶</a></h2>
-</section>
-<section id="v0-5-2">
+</div>
+<div class="section" id="v0-5-2">
 <h2>v0.5.2<a class="headerlink" href="#v0-5-2" title="Permalink to this headline">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Date</dt>
@@ -251,15 +258,15 @@ The next full release will contain all PR’s previously merged.</p>
 <ul class="simple">
 <li><p>Depend on docutils &lt; 0.17 (#1113)</p></li>
 </ul>
-</section>
-<section id="v0-5-1">
+</div>
+<div class="section" id="v0-5-1">
 <h2>v0.5.1<a class="headerlink" href="#v0-5-1" title="Permalink to this headline">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Date</dt>
 <dd class="field-odd"><p>January 4, 2021</p>
 </dd>
 </dl>
-<section id="fixes">
+<div class="section" id="fixes">
 <h3>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Set <code class="docutils literal notranslate"><span class="pre">url_root</span></code> properly on index (#1025)</p></li>
@@ -271,14 +278,14 @@ The next full release will contain all PR’s previously merged.</p>
 <li><p>Footer: show both <code class="docutils literal notranslate"><span class="pre">commit</span></code> and <code class="docutils literal notranslate"><span class="pre">last_updated</span></code> if available (#897)</p></li>
 <li><p>Search page: don’t show “edit on” links (#935)</p></li>
 </ul>
-</section>
-<section id="new-features">
+</div>
+<div class="section" id="new-features">
 <h3>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>New theme option to enable anonymous ip addresses when using Google Analytics (#889)</p></li>
 </ul>
-</section>
-<section id="other-changes">
+</div>
+<div class="section" id="other-changes">
 <h3>Other Changes<a class="headerlink" href="#other-changes" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>The <code class="docutils literal notranslate"><span class="pre">canonical_url</span></code> option was deprecated in favor of Sphinx’s <code class="docutils literal notranslate"><span class="pre">html_baseurl</span></code> (#1003)</p></li>
@@ -286,30 +293,30 @@ The next full release will contain all PR’s previously merged.</p>
 <li><p>Make Copyright template match sphinx’s basic (#933)</p></li>
 <li><p>Packaging: include <code class="docutils literal notranslate"><span class="pre">bin/preinstall.js</span></code> (#1005)</p></li>
 </ul>
-</section>
-</section>
-<section id="v0-5-0">
+</div>
+</div>
+<div class="section" id="v0-5-0">
 <h2>v0.5.0<a class="headerlink" href="#v0-5-0" title="Permalink to this headline">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Date</dt>
 <dd class="field-odd"><p>Jun 17, 2020</p>
 </dd>
 </dl>
-<section id="id1">
+<div class="section" id="id1">
 <h3>Fixes<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Fix bullet list spacing to respect simple/complex list styles</p></li>
 </ul>
-</section>
-</section>
-<section id="v0-5-0rc2">
+</div>
+</div>
+<div class="section" id="v0-5-0rc2">
 <h2>v0.5.0rc2<a class="headerlink" href="#v0-5-0rc2" title="Permalink to this headline">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Date</dt>
 <dd class="field-odd"><p>June 5, 2020</p>
 </dd>
 </dl>
-<section id="id2">
+<div class="section" id="id2">
 <h3>Fixes<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Fix issue with simple definition lists that was missed</p></li>
@@ -317,22 +324,22 @@ The next full release will contain all PR’s previously merged.</p>
 <li><p>Fix several margin issues with lists, nested lists, and nested content</p></li>
 <li><p>Add colon back to field lists</p></li>
 </ul>
-</section>
-</section>
-<section id="v0-5-0rc1">
+</div>
+</div>
+<div class="section" id="v0-5-0rc1">
 <h2>v0.5.0rc1<a class="headerlink" href="#v0-5-0rc1" title="Permalink to this headline">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Date</dt>
 <dd class="field-odd"><p>May 6, 2020</p>
 </dd>
 </dl>
-<section id="id3">
+<div class="section" id="id3">
 <h3>Fixes<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Fix many styling issues that look different when using the Sphinx HTML5 writer</p></li>
 </ul>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h3>Other Changes<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Add the <code class="docutils literal notranslate"><span class="pre">navigation</span></code> template block around the navigation area.</p></li>
@@ -341,19 +348,19 @@ The next full release will contain all PR’s previously merged.</p>
 <li><p>Moved build system from Grunt and friends to Webpack</p></li>
 <li><p>Remove Modernizr, but keep html5shiv (#724, #525)</p></li>
 </ul>
-</section>
-</section>
-<section id="v0-4-3">
+</div>
+</div>
+<div class="section" id="v0-4-3">
 <h2>v0.4.3<a class="headerlink" href="#v0-4-3" title="Permalink to this headline">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Date</dt>
 <dd class="field-odd"><p>Feb 12, 2019</p>
 </dd>
 </dl>
-<section id="id5">
+<div class="section" id="id5">
 <h3>New Features<a class="headerlink" href="#id5" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="id6">
+</div>
+<div class="section" id="id6">
 <h3>Fixes<a class="headerlink" href="#id6" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Fix scrolling to active item in sidebar on load (#214)</p></li>
@@ -361,85 +368,85 @@ The next full release will contain all PR’s previously merged.</p>
 <li><p>Fix inconsistent font size and line height for autodoc “raises” and “returns” (#267)</p></li>
 <li><p>Fix last_updated notice appearing in same line as copyright notice (#704)</p></li>
 </ul>
-</section>
-<section id="id7">
+</div>
+<div class="section" id="id7">
 <h3>Other Changes<a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-</section>
-</section>
-<section id="v0-4-2">
+</div>
+</div>
+<div class="section" id="v0-4-2">
 <h2>v0.4.2<a class="headerlink" href="#v0-4-2" title="Permalink to this headline">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Date</dt>
 <dd class="field-odd"><p>Oct 5, 2018</p>
 </dd>
 </dl>
-<section id="id8">
+<div class="section" id="id8">
 <h3>New Features<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="id9">
+</div>
+<div class="section" id="id9">
 <h3>Fixes<a class="headerlink" href="#id9" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Set base font size on &lt;html&gt; (#668)</p></li>
 <li><p>Fix HTML search not working with Sphinx-1.8 (#672)</p></li>
 </ul>
-</section>
-<section id="id10">
+</div>
+<div class="section" id="id10">
 <h3>Other Changes<a class="headerlink" href="#id10" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Upload signed packages to PyPI with twine (#651)</p></li>
 <li><p>Do not enforce period at the end of copyright statement (666)</p></li>
 </ul>
-</section>
-</section>
-<section id="v0-4-1">
+</div>
+</div>
+<div class="section" id="v0-4-1">
 <h2>v0.4.1<a class="headerlink" href="#v0-4-1" title="Permalink to this headline">¶</a></h2>
 <dl class="field-list simple">
 <dt class="field-odd">Date</dt>
 <dd class="field-odd"><p>July 27, 2018</p>
 </dd>
 </dl>
-<section id="id11">
+<div class="section" id="id11">
 <h3>New Features<a class="headerlink" href="#id11" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="id12">
+</div>
+<div class="section" id="id12">
 <h3>Fixes<a class="headerlink" href="#id12" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Line height adjustments for Liberation Mono (#656)</p></li>
 </ul>
-</section>
-<section id="id13">
+</div>
+<div class="section" id="id13">
 <h3>Other Changes<a class="headerlink" href="#id13" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Add Sphinx as a dependency</p></li>
 </ul>
-</section>
-</section>
-<section id="v0-4-0">
+</div>
+</div>
+<div class="section" id="v0-4-0">
 <h2>v0.4.0<a class="headerlink" href="#v0-4-0" title="Permalink to this headline">¶</a></h2>
 <p>This version made some changes to how JS and CSS were included
 when the theme is used on Read the Docs.</p>
-<section id="id14">
+<div class="section" id="id14">
 <h3>New Features<a class="headerlink" href="#id14" title="Permalink to this headline">¶</a></h3>
-</section>
-<section id="id15">
+</div>
+<div class="section" id="id15">
 <h3>Fixes<a class="headerlink" href="#id15" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Do not rely on readthedocs.org for CSS/JS (#614)</p></li>
 <li><p>Color accessibility improvements on the left navigation</p></li>
 </ul>
-</section>
-<section id="id16">
+</div>
+<div class="section" id="id16">
 <h3>Other Changes<a class="headerlink" href="#id16" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Write theme version and build date at top of JavaScript and CSS</p></li>
 <li><p>Changed code and literals to use a native font stack (#612)</p></li>
 <li><p>Fix small styling issues</p></li>
 </ul>
-</section>
-</section>
-<section id="v0-3-1">
+</div>
+</div>
+<div class="section" id="v0-3-1">
 <h2>v0.3.1<a class="headerlink" href="#v0-3-1" title="Permalink to this headline">¶</a></h2>
-<section id="id17">
+<div class="section" id="id17">
 <h3>Fixes<a class="headerlink" href="#id17" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Revert part of #576 causing display issues with version selector menu</p></li>
@@ -448,12 +455,12 @@ when the theme is used on Read the Docs.</p>
 <li><p>Add open list spacing (#591)</p></li>
 <li><p>Fix table centering (#599)</p></li>
 </ul>
-</section>
-</section>
-<section id="v0-3-0">
+</div>
+</div>
+<div class="section" id="v0-3-0">
 <h2>v0.3.0<a class="headerlink" href="#v0-3-0" title="Permalink to this headline">¶</a></h2>
 <p><strong>Note</strong>: this version resulted in some JavaScript incompatibilities when used on readthedocs.org</p>
-<section id="id18">
+<div class="section" id="id18">
 <h3>New Features<a class="headerlink" href="#id18" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Add html language attribute</p></li>
@@ -465,8 +472,8 @@ when the theme is used on Read the Docs.</p>
 Sphinx <code class="docutils literal notranslate"><span class="pre">html_theme</span></code> directly.</p></li>
 <li><p>Add language to the JS output variable</p></li>
 </ul>
-</section>
-<section id="id19">
+</div>
+<div class="section" id="id19">
 <h3>Fixes<a class="headerlink" href="#id19" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Fix some HTML warnings and errors</p></li>
@@ -476,54 +483,54 @@ Sphinx <code class="docutils literal notranslate"><span class="pre">html_theme</
 <li><p>Hide Edit links on auto created pages</p></li>
 <li><p>Include missing font files with the theme</p></li>
 </ul>
-</section>
-<section id="id20">
+</div>
+<div class="section" id="id20">
 <h3>Other Changes<a class="headerlink" href="#id20" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Significant improvement of our documentation</p></li>
 <li><p>Compress our Javascript files</p></li>
 <li><p>Updated dependencies</p></li>
 </ul>
-</section>
-</section>
-<section id="v0-2-4">
+</div>
+</div>
+<div class="section" id="v0-2-4">
 <h2>v0.2.4<a class="headerlink" href="#v0-2-4" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Yet another patch to deal with extra builders outside Spinx, such as the
 singlehtml builders from the Read the Docs Sphinx extension</p></li>
 </ul>
-</section>
-<section id="v0-2-3">
+</div>
+<div class="section" id="v0-2-3">
 <h2>v0.2.3<a class="headerlink" href="#v0-2-3" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Temporarily patch Sphinx issue with <code class="docutils literal notranslate"><span class="pre">singlehtml</span></code> builder by inspecting the
 builder in template.</p></li>
 </ul>
-</section>
-<section id="v0-2-2">
+</div>
+<div class="section" id="v0-2-2">
 <h2>v0.2.2<a class="headerlink" href="#v0-2-2" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Roll back toctree fix in 0.2.1 (#367). This didn’t fix the issue and
 introduced another bug with toctrees display.</p></li>
 </ul>
-</section>
-<section id="v0-2-1">
+</div>
+<div class="section" id="v0-2-1">
 <h2>v0.2.1<a class="headerlink" href="#v0-2-1" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Add the <code class="docutils literal notranslate"><span class="pre">rel</span></code> HTML attribute to the footer links which point to
 the previous and next pages.</p></li>
 <li><p>Fix toctree issue caused by Sphinx singlehtml builder (#367)</p></li>
 </ul>
-</section>
-<section id="v0-2-0">
+</div>
+<div class="section" id="v0-2-0">
 <h2>v0.2.0<a class="headerlink" href="#v0-2-0" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Adds the <code class="docutils literal notranslate"><span class="pre">comments</span></code> block after the <code class="docutils literal notranslate"><span class="pre">body</span></code> block in the template</p></li>
 <li><p>Added “Edit on GitLab” support</p></li>
 <li><p>Many bug fixes</p></li>
 </ul>
-</section>
-<section id="v0-1-10-alpha">
+</div>
+<div class="section" id="v0-1-10-alpha">
 <h2>v0.1.10-alpha<a class="headerlink" href="#v0-1-10-alpha" title="Permalink to this headline">¶</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -535,8 +542,8 @@ the previous and next pages.</p></li>
 <li><p>Adds a <code class="docutils literal notranslate"><span class="pre">body_begin</span></code> block to the template</p></li>
 <li><p>Added <code class="docutils literal notranslate"><span class="pre">prev_next_buttons_location</span></code></p></li>
 </ul>
-</section>
-<section id="v0-1-9">
+</div>
+<div class="section" id="v0-1-9">
 <h2>v0.1.9<a class="headerlink" href="#v0-1-9" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Intermittent scrollbar visibility bug fixed. This change introduces a
@@ -551,8 +558,8 @@ document footer block</p></li>
 <li><p>Fixed modernizr URL</p></li>
 <li><p>Small display style changes on code blocks, figure captions, and nav elements</p></li>
 </ul>
-</section>
-<section id="v0-1-8">
+</div>
+<div class="section" id="v0-1-8">
 <h2>v0.1.8<a class="headerlink" href="#v0-1-8" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Start keeping changelog :)</p></li>
@@ -561,35 +568,36 @@ document footer block</p></li>
 <li><p>Add sidebar headers for :caption: in Sphinx toctree</p></li>
 <li><p>Clean up sidebar scrolling behavior so it never scrolls out of view</p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
 
            </div>
            
           </div>
           <footer>
-  
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-      
-        <a href="installation.html" class="btn btn-neutral float-left" title="Paragraph Level Markup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
+        <a href="installation.html" class="btn btn-neutral float-left" title="Paragraph Level Markup" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2021 NHSX, MIT Licence
+        &#169; Copyright 2021 NHSX, MIT Licence.
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
-
         </div>
       </div>
 
@@ -597,7 +605,6 @@ document footer block</p></li>
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
