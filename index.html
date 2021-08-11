@@ -9,7 +9,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>NHSX Data Enginnering &mdash; NHSX Data Engineering  documentation</title>
+  <title>Read the Docs Sphinx Theme &mdash; NHSX Data Engineering  documentation</title>
   
 
   
@@ -38,8 +38,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
   <link rel="stylesheet" href="_static/css/theme_overrides.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="&lt;no title&gt;" href="faq.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -53,12 +52,12 @@
           
 
           
-            <a href="#">
+            <a href="#" class="icon icon-home"> NHSX Data Engineering
           
 
           
             
-            <img src="_static/logo.svg" class="logo" alt="Logo"/>
+            <img src="_static/logo-wordmark-light.svg" class="logo" alt="Logo"/>
           
           </a>
 
@@ -86,11 +85,18 @@
               
             
             
-              <p><span class="caption-text">Other Information</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="stats.html">Statistics</a></li>
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#">Read the Docs Sphinx Theme</a><ul>
+<li><a class="reference internal" href="#installation">Installation</a></li>
+<li><a class="reference internal" href="#configuration">Configuration</a></li>
+<li><a class="reference internal" href="#contributing">Contributing</a><ul>
 </ul>
-
+</li>
+</ul>
+</li>
+</ul>
+</div>
             
           
         </div>
@@ -134,7 +140,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>NHSX Data Enginnering</li>
+      <li>Read the Docs Sphinx Theme</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -153,13 +159,55 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <section id="nhsx-data-enginnering">
-<h1>NHSX Data Enginnering<a class="headerlink" href="#nhsx-data-enginnering" title="Permalink to this headline">¶</a></h1>
-<p>test</p>
+  <section id="read-the-docs-sphinx-theme">
+<h1>Read the Docs Sphinx Theme<a class="headerlink" href="#read-the-docs-sphinx-theme" title="Permalink to this headline">¶</a></h1>
+<a class="reference external image-reference" href="https://pypi.python.org/pypi/sphinx_rtd_theme"><img alt="Pypi Version" src="https://img.shields.io/pypi/v/sphinx_rtd_theme.svg" /></a>
+<a class="reference external image-reference" href="https://circleci.com/gh/readthedocs/sphinx_rtd_theme"><img alt="Build Status" src="https://circleci.com/gh/readthedocs/sphinx_rtd_theme.svg?style=svg" /></a>
+<a class="reference external image-reference" href="https://pypi.python.org/pypi/sphinx_rtd_theme/"><img alt="License" src="https://img.shields.io/pypi/l/sphinx_rtd_theme.svg" /></a>
+<a class="reference external image-reference" href="http://sphinx-rtd-theme.readthedocs.io/en/latest/?badge=latest"><img alt="Documentation Status" src="https://readthedocs.org/projects/sphinx-rtd-theme/badge/?version=latest" /></a>
+<p>This <a class="reference external" href="http://www.sphinx-doc.org">Sphinx</a> theme was designed to provide a great reader experience for
+documentation users on both desktop and mobile devices. This theme is used
+primarily on <a class="reference external" href="http://www.readthedocs.org">Read the Docs</a> but can work with any Sphinx project. You can find
+a working demo of the theme in the <a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/">theme documentation</a></p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>This theme is distributed on <a class="reference external" href="https://pypi.python.org/pypi/sphinx_rtd_theme">PyPI</a> and can be installed with <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install sphinx-rtd-theme
+</pre></div>
+</div>
+<p>To use the theme in your Sphinx project, you will need to add the following to
+your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sphinx_rtd_theme</span>
+
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="o">...</span>
+    <span class="s2">&quot;sphinx_rtd_theme&quot;</span><span class="p">,</span>
+<span class="p">]</span>
+
+<span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;sphinx_rtd_theme&quot;</span>
+</pre></div>
+</div>
+<p>For more information read the full documentation on <a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/installing.html">installing the theme</a></p>
+</section>
+<section id="configuration">
+<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>This theme is highly customizable on both the page level and on a global level.
+To see all the possible configuration options, read the documentation on
+<a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html">configuring the theme</a>.</p>
+</section>
+<section id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
+<p>If you would like to help modify or translate the theme, you’ll find more
+information on contributing in our <a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/contributing.html">contributing guide</a>.</p>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
 </div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
 </section>
 
 
@@ -168,19 +216,12 @@
           </div>
           <footer>
   
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="faq.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-    </div>
-  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2020, NHSX; All content is available under the Open Government Licence v3.0, except where otherwise stated.
+        &copy; Copyright 2020, NHSX; All content is available under the MIT Licence except where otherwise stated.
 
     </p>
   </div>
