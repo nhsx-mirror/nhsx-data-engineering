@@ -186,22 +186,22 @@
            <div itemprop="articleBody">
             
   <div class="section" id="open-analytics-template">
-<h1><a class="toc-backref" href="#id1">Open Analytics Template</a><a class="headerlink" href="#open-analytics-template" title="Permalink to this headline">¶</a></h1>
+<h1><a class="toc-backref" href="#id2">Open Analytics Template</a><a class="headerlink" href="#open-analytics-template" title="Permalink to this headline">¶</a></h1>
 <div class="contents topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#open-analytics-template" id="id1">Open Analytics Template</a></p>
+<li><p><a class="reference internal" href="#open-analytics-template" id="id2">Open Analytics Template</a></p>
 <ul>
-<li><p><a class="reference internal" href="#github-api" id="id2">GitHub API</a></p></li>
-<li><p><a class="reference internal" href="#plotly" id="id3">Plotly</a></p></li>
-<li><p><a class="reference internal" href="#github-actions" id="id4">Github Actions</a></p>
+<li><p><a class="reference internal" href="#github-api" id="id3">GitHub API</a></p></li>
+<li><p><a class="reference internal" href="#plotly" id="id4">Plotly</a></p></li>
+<li><p><a class="reference internal" href="#github-actions" id="id5">Github Actions</a></p>
 <ul>
-<li><p><a class="reference internal" href="#events-that-trigger-workflows" id="id5">Events that trigger workflows</a></p></li>
-<li><p><a class="reference internal" href="#jobs" id="id6">Jobs</a></p></li>
-<li><p><a class="reference internal" href="#steps" id="id7">Steps</a></p></li>
+<li><p><a class="reference internal" href="#events-that-trigger-workflows" id="id6">Events that trigger workflows</a></p></li>
+<li><p><a class="reference internal" href="#jobs" id="id7">Jobs</a></p></li>
+<li><p><a class="reference internal" href="#steps" id="id8">Steps</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#github-pages" id="id8">GitHub Pages</a></p></li>
+<li><p><a class="reference internal" href="#github-pages" id="id9">GitHub Pages</a></p></li>
 </ul>
 </li>
 </ul>
@@ -215,7 +215,7 @@
 </ol>
 <p>The four components come together to create a very light and reusable pipeline for open analytics.</p>
 <div class="section" id="github-api">
-<h2><a class="toc-backref" href="#id2">GitHub API</a><a class="headerlink" href="#github-api" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id3">GitHub API</a><a class="headerlink" href="#github-api" title="Permalink to this headline">¶</a></h2>
 <p>An API (Application Program Interface) allows us to access web tools or data in the cloud. The Github API’s are designed so that we can create and manage our repositories, branches, issues, pull requests programmatically. Typically you would need to sign into your own account to access these features, but some information is publicly available. In this project we are using the API to access publicly available information on open source repositories published by NHS and health related organisations.</p>
 <p>We use the <code class="docutils literal notranslate"><span class="pre">urllib.request</span></code> python library to access the API as follows:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">url</span> <span class="o">=</span> <span class="p">(</span>
@@ -242,7 +242,7 @@
 </div>
 </div>
 <div class="section" id="plotly">
-<h2><a class="toc-backref" href="#id3">Plotly</a><a class="headerlink" href="#plotly" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id4">Plotly</a><a class="headerlink" href="#plotly" title="Permalink to this headline">¶</a></h2>
 <p>Plotly (<a class="reference external" href="https://plotly.com/python/">https://plotly.com/python/</a>) is a free and open source graphing library that that supports over 40 interactive, publication-quality graphs. It is available in <code class="docutils literal notranslate"><span class="pre">Python</span></code>, <code class="docutils literal notranslate"><span class="pre">R</span></code>, and <code class="docutils literal notranslate"><span class="pre">JavaScript</span></code> although the rendering process uses the <code class="docutils literal notranslate"><span class="pre">Plotly.js</span></code> JavaScript library under the hood.</p>
 <p>We use Plotly to save the graph to standalone HTML files.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># example plotly chart syntax</span>
@@ -263,11 +263,11 @@
 </div>
 </div>
 <div class="section" id="github-actions">
-<h2><a class="toc-backref" href="#id4">Github Actions</a><a class="headerlink" href="#github-actions" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id5">Github Actions</a><a class="headerlink" href="#github-actions" title="Permalink to this headline">¶</a></h2>
 <p>GitHub Actions (<a class="reference external" href="https://github.com/features/actions">https://github.com/features/actions</a>) are a way to automate workflows using a simple <code class="docutils literal notranslate"><span class="pre">YAML</span></code> syntax (<a class="reference external" href="https://learnxinyminutes.com/docs/yaml/">https://learnxinyminutes.com/docs/yaml/</a>). It’s free on public repositories.</p>
 <p>You must store workflow files in the <code class="docutils literal notranslate"><span class="pre">.github/workflows</span></code> directory of your repository.</p>
 <div class="section" id="events-that-trigger-workflows">
-<h3><a class="toc-backref" href="#id5">Events that trigger workflows</a><a class="headerlink" href="#events-that-trigger-workflows" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id6">Events that trigger workflows</a><a class="headerlink" href="#events-that-trigger-workflows" title="Permalink to this headline">¶</a></h3>
 <p>The name of the GitHub event that triggers the workflow. For a list of available events, see Events that trigger workflows (<a class="reference external" href="https://docs.github.com/en/actions/reference/events-that-trigger-workflows">https://docs.github.com/en/actions/reference/events-that-trigger-workflows</a>).</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">on</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">push</span><span class="p p-Indicator">,</span> <span class="nv">pull_request</span><span class="p p-Indicator">]</span>
 </pre></div>
@@ -276,11 +276,43 @@
 <p>This example triggers the workflow every day at 00:00 UTC:</p>
 </div>
 <div class="section" id="jobs">
-<h3><a class="toc-backref" href="#id6">Jobs</a><a class="headerlink" href="#jobs" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id7">Jobs</a><a class="headerlink" href="#jobs" title="Permalink to this headline">¶</a></h3>
 <p>A workflow run is made up of one or more jobs. Each job runs in a fresh instance of a virtual environment specified by <cite>runs-on</cite>.</p>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text">Virtual environments</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 38%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Virtual environment</p></th>
+<th class="head"><p>YAML workflow label</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Windows Server 2019</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">windows-latest</span></code> or <code class="docutils literal notranslate"><span class="pre">windows-2019</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Windows Server 2016</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">windows-2016</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>Ubuntu 20.04</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ubuntu-latest</span></code> or <code class="docutils literal notranslate"><span class="pre">ubuntu-20.04</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Ubuntu 18.04</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">`ubuntu-18.04</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p>macOS Big Sur 11</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">macos-11</span></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>macOS Catalina 10.15</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">macos-latest</span></code> or <code class="docutils literal notranslate"><span class="pre">macos-10.15</span></code></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="section" id="steps">
-<h3><a class="toc-backref" href="#id7">Steps</a><a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id8">Steps</a><a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
 <p>Checkout (<a class="reference external" href="https://github.com/actions/checkout">https://github.com/actions/checkout</a>): This action checks-out your repository so the workflow can access it.</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">checkout repo content</span>
 <span class="nt">uses</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">actions/checkout@v2</span>
@@ -341,7 +373,7 @@
 </div>
 </div>
 <div class="section" id="github-pages">
-<h2><a class="toc-backref" href="#id8">GitHub Pages</a><a class="headerlink" href="#github-pages" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id9">GitHub Pages</a><a class="headerlink" href="#github-pages" title="Permalink to this headline">¶</a></h2>
 <p>GitHub Pages (<a class="reference external" href="https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site">https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site</a>) is a static site hosting service that takes HTML, CSS, and JavaScript files straight from a repository on GitHub, optionally runs the files through a build process, and publishes a website.</p>
 <p>You can use a static site generator to build your site for you or publish any static files that you push to your repository as follows:</p>
 <ol class="arabic simple">
