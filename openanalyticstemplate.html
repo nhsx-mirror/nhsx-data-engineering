@@ -9,7 +9,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Paragraph Level Markup &mdash; NHSX Data Engineering 0.0.1 documentation</title>
+  <title>Open Analytics Template &mdash; NHSX Data Engineering 0.0.1 documentation</title>
   
 
   
@@ -46,7 +46,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Changelog" href="changelog.html" />
-    <link rel="prev" title="Home" href="home.html" /> 
+    <link rel="prev" title="Design Principles" href="designprinciples.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -98,13 +98,13 @@
               
             
             
-              <p class="caption"><span class="caption-text">Introduction</span></p>
+              <p class="caption"><span class="caption-text">Data Engineering</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="home.html">Home</a></li>
+<li class="toctree-l1"><a class="reference internal" href="designprinciples.html">Design Principles</a></li>
 </ul>
-<p class="caption"><span class="caption-text">Main Documentation</span></p>
+<p class="caption"><span class="caption-text">Open Analytics</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Paragraph Level Markup</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Open Analytics Template</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#inline-markup">Inline Markup</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#math">Math</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#meta">Meta</a></li>
@@ -200,13 +200,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Paragraph Level Markup</li>
+      <li>Open Analytics Template</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/openanalyticstemplate.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -219,73 +219,73 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="paragraph-level-markup">
-<h1><a class="toc-backref" href="#id32">Paragraph Level Markup</a><a class="headerlink" href="#paragraph-level-markup" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="open-analytics-template">
+<h1><a class="toc-backref" href="#id34">Open Analytics Template</a><a class="headerlink" href="#open-analytics-template" title="Permalink to this headline">¶</a></h1>
 <div class="contents topic" id="table-of-contents">
 <p class="topic-title">Table of Contents</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#paragraph-level-markup" id="id32">Paragraph Level Markup</a></p>
+<li><p><a class="reference internal" href="#open-analytics-template" id="id34">Open Analytics Template</a></p>
 <ul>
-<li><p><a class="reference internal" href="#inline-markup" id="id33">Inline Markup</a></p></li>
-<li><p><a class="reference internal" href="#math" id="id34">Math</a></p></li>
-<li><p><a class="reference internal" href="#meta" id="id35">Meta</a></p></li>
-<li><p><a class="reference internal" href="#blocks" id="id36">Blocks</a></p>
+<li><p><a class="reference internal" href="#inline-markup" id="id35">Inline Markup</a></p></li>
+<li><p><a class="reference internal" href="#math" id="id36">Math</a></p></li>
+<li><p><a class="reference internal" href="#meta" id="id37">Meta</a></p></li>
+<li><p><a class="reference internal" href="#blocks" id="id38">Blocks</a></p>
 <ul>
-<li><p><a class="reference internal" href="#literal-blocks" id="id37">Literal Blocks</a></p></li>
-<li><p><a class="reference internal" href="#line-blocks" id="id38">Line Blocks</a></p></li>
-<li><p><a class="reference internal" href="#block-quotes" id="id39">Block Quotes</a></p></li>
-<li><p><a class="reference internal" href="#doctest-blocks" id="id40">Doctest Blocks</a></p></li>
-<li><p><a class="reference internal" href="#code-blocks" id="id41">Code Blocks</a></p>
+<li><p><a class="reference internal" href="#literal-blocks" id="id39">Literal Blocks</a></p></li>
+<li><p><a class="reference internal" href="#line-blocks" id="id40">Line Blocks</a></p></li>
+<li><p><a class="reference internal" href="#block-quotes" id="id41">Block Quotes</a></p></li>
+<li><p><a class="reference internal" href="#doctest-blocks" id="id42">Doctest Blocks</a></p></li>
+<li><p><a class="reference internal" href="#code-blocks" id="id43">Code Blocks</a></p>
 <ul>
-<li><p><a class="reference internal" href="#emphasized-lines-with-line-numbers" id="id42">Emphasized lines with line numbers</a></p></li>
+<li><p><a class="reference internal" href="#emphasized-lines-with-line-numbers" id="id44">Emphasized lines with line numbers</a></p></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#sidebar" id="id43">Sidebar</a></p>
+<li><p><a class="reference internal" href="#sidebar" id="id45">Sidebar</a></p>
 <ul>
-<li><p><a class="reference internal" href="#code-with-sidebar" id="id44">Code with Sidebar</a></p></li>
+<li><p><a class="reference internal" href="#code-with-sidebar" id="id46">Code with Sidebar</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#references" id="id45">References</a></p>
+<li><p><a class="reference internal" href="#references" id="id47">References</a></p>
 <ul>
-<li><p><a class="reference internal" href="#footnotes" id="id46">Footnotes</a></p></li>
-<li><p><a class="reference internal" href="#citations" id="id47">Citations</a></p></li>
-<li><p><a class="reference internal" href="#glossary" id="id48">Glossary</a></p></li>
-<li><p><a class="reference internal" href="#targets" id="id49">Targets</a></p></li>
+<li><p><a class="reference internal" href="#footnotes" id="id48">Footnotes</a></p></li>
+<li><p><a class="reference internal" href="#citations" id="id49">Citations</a></p></li>
+<li><p><a class="reference internal" href="#glossary" id="id50">Glossary</a></p></li>
+<li><p><a class="reference internal" href="#targets" id="id51">Targets</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#directives" id="id50">Directives</a></p>
+<li><p><a class="reference internal" href="#directives" id="id52">Directives</a></p>
 <ul>
-<li><p><a class="reference internal" href="#contents" id="id51">Contents</a></p></li>
-<li><p><a class="reference internal" href="#centered-text" id="id52">Centered text</a></p></li>
-<li><p><a class="reference internal" href="#images-figures" id="id53">Images &amp; Figures</a></p>
+<li><p><a class="reference internal" href="#contents" id="id53">Contents</a></p></li>
+<li><p><a class="reference internal" href="#centered-text" id="id54">Centered text</a></p></li>
+<li><p><a class="reference internal" href="#images-figures" id="id55">Images &amp; Figures</a></p>
 <ul>
-<li><p><a class="reference internal" href="#images" id="id54">Images</a></p></li>
-<li><p><a class="reference internal" href="#figures" id="id55">Figures</a></p></li>
+<li><p><a class="reference internal" href="#images" id="id56">Images</a></p></li>
+<li><p><a class="reference internal" href="#figures" id="id57">Figures</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#admonitions" id="id56">Admonitions</a></p></li>
-<li><p><a class="reference internal" href="#topics-sidebars-and-rubrics" id="id57">Topics, Sidebars, and Rubrics</a></p></li>
-<li><p><a class="reference internal" href="#target-footnotes" id="id58">Target Footnotes</a></p></li>
-<li><p><a class="reference internal" href="#replacement-text" id="id59">Replacement Text</a></p></li>
-<li><p><a class="reference internal" href="#compound-paragraph" id="id60">Compound Paragraph</a></p></li>
+<li><p><a class="reference internal" href="#admonitions" id="id58">Admonitions</a></p></li>
+<li><p><a class="reference internal" href="#topics-sidebars-and-rubrics" id="id59">Topics, Sidebars, and Rubrics</a></p></li>
+<li><p><a class="reference internal" href="#target-footnotes" id="id60">Target Footnotes</a></p></li>
+<li><p><a class="reference internal" href="#replacement-text" id="id61">Replacement Text</a></p></li>
+<li><p><a class="reference internal" href="#compound-paragraph" id="id62">Compound Paragraph</a></p></li>
 </ul>
 </li>
-<li><p><a class="reference internal" href="#download-links" id="id61">Download Links</a></p></li>
+<li><p><a class="reference internal" href="#download-links" id="id63">Download Links</a></p></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="section" id="inline-markup">
-<h2><a class="toc-backref" href="#id33">Inline Markup</a><a class="headerlink" href="#inline-markup" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id35">Inline Markup</a><a class="headerlink" href="#inline-markup" title="Permalink to this headline">¶</a></h2>
 <p>Paragraphs contain text and may contain inline markup: <em>emphasis</em>, <strong>strong emphasis</strong>, <code class="docutils literal notranslate"><span class="pre">inline</span> <span class="pre">literals</span></code>,
-standalone hyperlinks (<a class="reference external" href="http://www.python.org">http://www.python.org</a>), external hyperlinks (<a class="reference external" href="http://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id28" id="id29">5</a>), internal cross-references (<a class="reference internal" href="#example">example</a>),
+standalone hyperlinks (<a class="reference external" href="http://www.python.org">http://www.python.org</a>), external hyperlinks (<a class="reference external" href="http://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id30" id="id31">5</a>), internal cross-references (<a class="reference internal" href="#example">example</a>),
 external hyperlinks with embedded URIs (<a class="reference external" href="http://www.python.org">Python web site</a>), footnote references
 (manually numbered <a class="footnote-reference brackets" href="#id6" id="id1">1</a>, anonymous auto-numbered <a class="footnote-reference brackets" href="#id9" id="id2">3</a>, labeled auto-numbered <a class="footnote-reference brackets" href="#label" id="id3">2</a>, or symbolic <a class="footnote-reference brackets" href="#id10" id="id4">*</a>),
-citation references (<a class="footnote-reference brackets" href="#id16" id="id5">12</a>), substitution references (<a class="reference internal" href="static/yi_jing_01_chien.jpg"><img alt="EXAMPLE" src="static/yi_jing_01_chien.jpg" style="width: 1em;" /></a>), and <span class="target" id="inline-hyperlink-targets">inline hyperlink targets</span>
+citation references (<a class="footnote-reference brackets" href="#id16" id="id5">12</a>), substitution references (<a href="#id26"><span class="problematic" id="id27">|example|</span></a>), and <span class="target" id="inline-hyperlink-targets">inline hyperlink targets</span>
 (see <a class="reference internal" href="#targets">Targets</a> below for a reference back to here). Character-level inline markup is also possible
-(although exceedingly ugly!) in <em>re</em><code class="docutils literal notranslate"><span class="pre">Structured</span></code><em>Text</em>. Problems are indicated by <a href="#id26"><span class="problematic" id="id27">|problematic|</span></a>
+(although exceedingly ugly!) in <em>re</em><code class="docutils literal notranslate"><span class="pre">Structured</span></code><em>Text</em>. Problems are indicated by <a href="#id28"><span class="problematic" id="id29">|problematic|</span></a>
 text (generated by processing errors; this one is intentional).</p>
 <p>Also with <code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code>, which I use in the demo, I can link to <code class="xref py py-class docutils literal notranslate"><span class="pre">test_py_module.test.Foo</span></code>.
 It will link you right to my code documentation for it.</p>
@@ -308,7 +308,7 @@ For example, and <code class="docutils literal notranslate"><span class="pre">me
 <p>If the <code class="docutils literal notranslate"><span class="pre">--pep-references</span></code> option was supplied, there should be a live link to PEP 258 here.</p>
 </div>
 <div class="section" id="math">
-<h2><a class="toc-backref" href="#id34">Math</a><a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id36">Math</a><a class="headerlink" href="#math" title="Permalink to this headline">¶</a></h2>
 <p>This is a test. Here is an equation:
 <span class="math notranslate nohighlight">\(X_{0:5} = (X_0, X_1, X_2, X_3, X_4)\)</span>.
 Here is another:</p>
@@ -322,12 +322,12 @@ Here is another:</p>
 <p>You can add a link to equations like the one above <a class="reference internal" href="#equation-this-is-a-label">(1)</a> by using <code class="docutils literal notranslate"><span class="pre">:eq:</span></code>.</p>
 </div>
 <div class="section" id="meta">
-<h2><a class="toc-backref" href="#id35">Meta</a><a class="headerlink" href="#meta" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id37">Meta</a><a class="headerlink" href="#meta" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="blocks">
-<h2><a class="toc-backref" href="#id36">Blocks</a><a class="headerlink" href="#blocks" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id38">Blocks</a><a class="headerlink" href="#blocks" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="literal-blocks">
-<h3><a class="toc-backref" href="#id37">Literal Blocks</a><a class="headerlink" href="#literal-blocks" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id39">Literal Blocks</a><a class="headerlink" href="#literal-blocks" title="Permalink to this headline">¶</a></h3>
 <p>Literal blocks are indicated with a double-colon (“::”) at the end of
 the preceding paragraph (over there <code class="docutils literal notranslate"><span class="pre">--&gt;</span></code>).  They can be indented:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">literal_block</span><span class="p">:</span>
@@ -344,7 +344,7 @@ the preceding paragraph (over there <code class="docutils literal notranslate"><
 </div>
 </div>
 <div class="section" id="line-blocks">
-<h3><a class="toc-backref" href="#id38">Line Blocks</a><a class="headerlink" href="#line-blocks" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id40">Line Blocks</a><a class="headerlink" href="#line-blocks" title="Permalink to this headline">¶</a></h3>
 <div class="line-block">
 <div class="line">This is a line block.  It ends with a blank line.</div>
 <div class="line-block">
@@ -393,7 +393,7 @@ the left edge of the text above it.</div>
 </div></blockquote>
 </div>
 <div class="section" id="block-quotes">
-<h3><a class="toc-backref" href="#id39">Block Quotes</a><a class="headerlink" href="#block-quotes" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id41">Block Quotes</a><a class="headerlink" href="#block-quotes" title="Permalink to this headline">¶</a></h3>
 <p>Block quotes consist of indented body elements:</p>
 <blockquote>
 <div><p>My theory by A. Elk.  Brackets Miss, brackets.  This theory goes
@@ -405,7 +405,7 @@ own it, and what it is too.</p>
 </div></blockquote>
 </div>
 <div class="section" id="doctest-blocks">
-<h3><a class="toc-backref" href="#id40">Doctest Blocks</a><a class="headerlink" href="#doctest-blocks" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id42">Doctest Blocks</a><a class="headerlink" href="#doctest-blocks" title="Permalink to this headline">¶</a></h3>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s1">&#39;Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;&#39;</span>
 <span class="go">Python-specific usage examples; begun with &quot;&gt;&gt;&gt;&quot;</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span> <span class="s1">&#39;(cut and pasted from interactive Python sessions)&#39;</span>
@@ -414,7 +414,7 @@ own it, and what it is too.</p>
 </div>
 </div>
 <div class="section" id="code-blocks">
-<h3><a class="toc-backref" href="#id41">Code Blocks</a><a class="headerlink" href="#code-blocks" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id43">Code Blocks</a><a class="headerlink" href="#code-blocks" title="Permalink to this headline">¶</a></h3>
 <pre class="literal-block"># parsed-literal test
 curl -O <a class="reference external" href="http://someurl/release">http://someurl/release</a>-0.0.1.tar-gz</pre>
 <div class="literal-block-wrapper docutils container" id="id23">
@@ -443,7 +443,7 @@ curl -O <a class="reference external" href="http://someurl/release">http://someu
 </div>
 </div>
 <div class="section" id="emphasized-lines-with-line-numbers">
-<h4><a class="toc-backref" href="#id42">Emphasized lines with line numbers</a><a class="headerlink" href="#emphasized-lines-with-line-numbers" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id44">Emphasized lines with line numbers</a><a class="headerlink" href="#emphasized-lines-with-line-numbers" title="Permalink to this headline">¶</a></h4>
 <div class="highlight-python notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
 <span class="normal">2</span>
 <span class="normal">3</span>
@@ -459,7 +459,7 @@ curl -O <a class="reference external" href="http://someurl/release">http://someu
 </div>
 </div>
 <div class="section" id="sidebar">
-<h2><a class="toc-backref" href="#id43">Sidebar</a><a class="headerlink" href="#sidebar" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id45">Sidebar</a><a class="headerlink" href="#sidebar" title="Permalink to this headline">¶</a></h2>
 <div class="sidebar">
 <p class="sidebar-title">Ch’ien / The Creative</p>
 <img alt="static/yi_jing_01_chien.jpg" src="static/yi_jing_01_chien.jpg" />
@@ -477,7 +477,7 @@ on the universe and of its action on the world of men. In relation to the univer
 creative action of the Deity. In relation to the human world, it denotes the creative action of the holy man or sage,
 of the ruler or leader of men, who through his power awakens and develops their higher nature.</p>
 <div class="section" id="code-with-sidebar">
-<h3><a class="toc-backref" href="#id44">Code with Sidebar</a><a class="headerlink" href="#code-with-sidebar" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id46">Code with Sidebar</a><a class="headerlink" href="#code-with-sidebar" title="Permalink to this headline">¶</a></h3>
 <div class="sidebar">
 <p class="sidebar-title">A code example</p>
 <p>With a sidebar on the right.</p>
@@ -485,9 +485,9 @@ of the ruler or leader of men, who through his power awakens and develops their 
 </div>
 </div>
 <div class="section" id="references">
-<h2><a class="toc-backref" href="#id45">References</a><a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id47">References</a><a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="footnotes">
-<h3><a class="toc-backref" href="#id46">Footnotes</a><a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id48">Footnotes</a><a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h3>
 <dl class="footnote brackets">
 <dt class="label" id="id6"><span class="brackets">1</span><span class="fn-backref">(<a href="#id1">1</a>,<a href="#id7">2</a>)</span></dt>
 <dd><p>A footnote contains body elements, consistently indented by at
@@ -514,12 +514,12 @@ Here’s a reference to the next footnote: <a class="footnote-reference brackets
 </dd>
 <dt class="label" id="id13"><span class="brackets">4</span></dt>
 <dd><p>Here’s an unreferenced footnote, with a reference to a
-nonexistent footnote: <a href="#id62"><span class="problematic" id="id14">[5]_</span></a>.</p>
+nonexistent footnote: <a href="#id64"><span class="problematic" id="id14">[5]_</span></a>.</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="citations">
-<h3><a class="toc-backref" href="#id47">Citations</a><a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id49">Citations</a><a class="headerlink" href="#citations" title="Permalink to this headline">¶</a></h3>
 <dl class="footnote brackets">
 <dt class="label" id="id15"><span class="brackets">11</span></dt>
 <dd><p>This is the citation I made, let’s make this extremely long so that we can tell that it doesn’t follow the normal responsive table stuff.</p>
@@ -536,7 +536,7 @@ nonexistent footnote: <a href="#id62"><span class="problematic" id="id14">[5]_</
 <p>Here is another type of citation: <cite>citation</cite></p>
 </div>
 <div class="section" id="glossary">
-<h3><a class="toc-backref" href="#id48">Glossary</a><a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id50">Glossary</a><a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h3>
 <p>This is a glossary with definition terms for thing like <a class="reference internal" href="#term-Writing"><span class="xref std std-term">Writing</span></a>:</p>
 <dl class="glossary simple">
 <dt id="term-Documentation">Documentation</dt><dd><p>Provides users with the knowledge they need to use something.</p>
@@ -548,39 +548,39 @@ nonexistent footnote: <a href="#id62"><span class="problematic" id="id14">[5]_</
 </dl>
 </div>
 <div class="section" id="targets">
-<h3><a class="toc-backref" href="#id49">Targets</a><a class="headerlink" href="#targets" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id51">Targets</a><a class="headerlink" href="#targets" title="Permalink to this headline">¶</a></h3>
 <p id="example">This paragraph is pointed to by the explicit “example” target.
 A reference can be found under <a class="reference internal" href="#inline-markup">Inline Markup</a>, above. <a class="reference internal" href="#inline-hyperlink-targets">Inline
 hyperlink targets</a> are also possible.</p>
 <p>Section headers are implicit targets, referred to by name. See
-<a class="reference internal" href="#targets">Targets</a>, which is a subsection of <a href="#id63"><span class="problematic" id="id64">`Body Elements`_</span></a>.</p>
-<p>Explicit external targets are interpolated into references such as “<a class="reference external" href="http://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id28" id="id30">5</a>”.</p>
+<a class="reference internal" href="#targets">Targets</a>, which is a subsection of <a href="#id65"><span class="problematic" id="id66">`Body Elements`_</span></a>.</p>
+<p>Explicit external targets are interpolated into references such as “<a class="reference external" href="http://www.python.org/">Python</a> <a class="footnote-reference brackets" href="#id30" id="id32">5</a>”.</p>
 <p>Targets may be indirect and anonymous.  Thus <a class="reference internal" href="#targets">this phrase</a> may also
 refer to the <a class="reference internal" href="#targets">Targets</a> section.</p>
-<p>Here’s a <a href="#id65"><span class="problematic" id="id66">`hyperlink reference without a target`_</span></a>, which generates an error.</p>
+<p>Here’s a <a href="#id67"><span class="problematic" id="id68">`hyperlink reference without a target`_</span></a>, which generates an error.</p>
 </div>
 </div>
 <div class="section" id="directives">
-<h2><a class="toc-backref" href="#id50">Directives</a><a class="headerlink" href="#directives" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id52">Directives</a><a class="headerlink" href="#directives" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="contents">
-<h3><a class="toc-backref" href="#id51">Contents</a><a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id53">Contents</a><a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h3>
 <p>These are just a sample of the many reStructuredText Directives. For others, please see:
 <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/directives.html">http://docutils.sourceforge.net/docs/ref/rst/directives.html</a>.</p>
 </div>
 <div class="section" id="centered-text">
-<h3><a class="toc-backref" href="#id52">Centered text</a><a class="headerlink" href="#centered-text" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id54">Centered text</a><a class="headerlink" href="#centered-text" title="Permalink to this headline">¶</a></h3>
 <p>You can create a statement with centered text with <code class="docutils literal notranslate"><span class="pre">..</span> <span class="pre">centered::</span></code></p>
 <p class="centered">
 <strong>This is centered text!</strong></p></div>
 <div class="section" id="images-figures">
-<h3><a class="toc-backref" href="#id53">Images &amp; Figures</a><a class="headerlink" href="#images-figures" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id55">Images &amp; Figures</a><a class="headerlink" href="#images-figures" title="Permalink to this headline">¶</a></h3>
 <div class="section" id="images">
-<h4><a class="toc-backref" href="#id54">Images</a><a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id56">Images</a><a class="headerlink" href="#images" title="Permalink to this headline">¶</a></h4>
 <p>An image directive (also clickable – a hyperlink reference):</p>
 <a class="reference internal image-reference" href="#directives"><img alt="static/yi_jing_01_chien.jpg" src="static/yi_jing_01_chien.jpg" /></a>
 </div>
 <div class="section" id="figures">
-<h4><a class="toc-backref" href="#id55">Figures</a><a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h4>
+<h4><a class="toc-backref" href="#id57">Figures</a><a class="headerlink" href="#figures" title="Permalink to this headline">¶</a></h4>
 <div class="figure align-default" id="id24">
 <img alt="reStructuredText, the markup syntax" src="static/yi_jing_01_chien.jpg" />
 <p class="caption"><span class="caption-text">A figure is an image with a caption and/or a legend:</span><a class="headerlink" href="#id24" title="Permalink to this image">¶</a></p>
@@ -613,7 +613,7 @@ refer to the <a class="reference internal" href="#targets">Targets</a> section.<
 </div>
 </div>
 <div class="section" id="admonitions">
-<h3><a class="toc-backref" href="#id56">Admonitions</a><a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id58">Admonitions</a><a class="headerlink" href="#admonitions" title="Permalink to this headline">¶</a></h3>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>Directives at large.</p>
@@ -691,7 +691,7 @@ Reader discretion is strongly advised.</p>
 </div>
 </div>
 <div class="section" id="topics-sidebars-and-rubrics">
-<h3><a class="toc-backref" href="#id57">Topics, Sidebars, and Rubrics</a><a class="headerlink" href="#topics-sidebars-and-rubrics" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id59">Topics, Sidebars, and Rubrics</a><a class="headerlink" href="#topics-sidebars-and-rubrics" title="Permalink to this headline">¶</a></h3>
 <div class="sidebar">
 <p class="sidebar-title">Sidebar Title</p>
 <p class="sidebar-subtitle">Optional Subtitle</p>
@@ -708,19 +708,19 @@ background color.</p>
 <p class="rubric">This is a rubric</p>
 </div>
 <div class="section" id="target-footnotes">
-<h3><a class="toc-backref" href="#id58">Target Footnotes</a><a class="headerlink" href="#target-footnotes" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id60">Target Footnotes</a><a class="headerlink" href="#target-footnotes" title="Permalink to this headline">¶</a></h3>
 <dl class="footnote brackets">
-<dt class="label" id="id28"><span class="brackets">5</span><span class="fn-backref">(<a href="#id29">1</a>,<a href="#id30">2</a>,<a href="#id31">3</a>)</span></dt>
+<dt class="label" id="id30"><span class="brackets">5</span><span class="fn-backref">(<a href="#id31">1</a>,<a href="#id32">2</a>,<a href="#id33">3</a>)</span></dt>
 <dd><p><a class="reference external" href="http://www.python.org/">http://www.python.org/</a></p>
 </dd>
 </dl>
 </div>
 <div class="section" id="replacement-text">
-<h3><a class="toc-backref" href="#id59">Replacement Text</a><a class="headerlink" href="#replacement-text" title="Permalink to this headline">¶</a></h3>
-<p>I recommend you try <a class="reference external" href="http://www.python.org/">Python, <em>the</em> best language around</a> <a class="footnote-reference brackets" href="#id28" id="id31">5</a>.</p>
+<h3><a class="toc-backref" href="#id61">Replacement Text</a><a class="headerlink" href="#replacement-text" title="Permalink to this headline">¶</a></h3>
+<p>I recommend you try <a class="reference external" href="http://www.python.org/">Python, <em>the</em> best language around</a> <a class="footnote-reference brackets" href="#id30" id="id33">5</a>.</p>
 </div>
 <div class="section" id="compound-paragraph">
-<h3><a class="toc-backref" href="#id60">Compound Paragraph</a><a class="headerlink" href="#compound-paragraph" title="Permalink to this headline">¶</a></h3>
+<h3><a class="toc-backref" href="#id62">Compound Paragraph</a><a class="headerlink" href="#compound-paragraph" title="Permalink to this headline">¶</a></h3>
 <div class="compound">
 <p class="compound-first">This paragraph contains a literal block:</p>
 <div class="compound-middle highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Connecting</span><span class="o">...</span> <span class="n">OK</span>
@@ -737,7 +737,7 @@ with the “compound” directive.</p>
 </div>
 </div>
 <div class="section" id="download-links">
-<h2><a class="toc-backref" href="#id61">Download Links</a><a class="headerlink" href="#download-links" title="Permalink to this headline">¶</a></h2>
+<h2><a class="toc-backref" href="#id63">Download Links</a><a class="headerlink" href="#download-links" title="Permalink to this headline">¶</a></h2>
 <p><code class="xref download docutils literal notranslate"><span class="pre">This</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">long</span> <span class="pre">download</span> <span class="pre">link</span> <span class="pre">should</span> <span class="pre">be</span> <span class="pre">blue,</span> <span class="pre">normal</span> <span class="pre">weight</span> <span class="pre">text</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">leading</span> <span class="pre">icon,</span> <span class="pre">and</span> <span class="pre">should</span> <span class="pre">wrap</span> <span class="pre">white-spaces</span></code></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;sphinx_rtd_theme&quot;</span>
 <span class="n">html_theme_path</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;_themes&quot;</span><span class="p">,</span> <span class="p">]</span>
@@ -753,7 +753,7 @@ with the “compound” directive.</p>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
         <a href="changelog.html" class="btn btn-neutral float-right" title="Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="home.html" class="btn btn-neutral float-left" title="Home" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="designprinciples.html" class="btn btn-neutral float-left" title="Design Principles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
