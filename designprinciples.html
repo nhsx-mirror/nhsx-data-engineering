@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Design Principles &mdash; NHSX Data Engineering 0.0.1 documentation</title>
+  <title>Azure Design Principles &mdash; NHSX Data Engineering 0.0.1 documentation</title>
   
 
   
@@ -98,10 +98,17 @@
             
               <p class="caption"><span class="caption-text">Data Engineering</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Design Principles</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#configuration">Configuration</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#contributing">Contributing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Azure Design Principles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-engineering-concepts">Data Engineering Concepts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#design-patterns">Design Patterns</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ingestion">Ingestion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#utilites">Utilites</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#config-as-code">Config as Code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#docs-as-code">Docs as Code</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pandas2adl.html">Azure DataLake to Pandas</a></li>
@@ -161,7 +168,7 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Design Principles</li>
+      <li>Azure Design Principles</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -180,43 +187,51 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="design-principles">
-<h1>Design Principles<a class="headerlink" href="#design-principles" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="azure-design-principles">
+<h1>Azure Design Principles<a class="headerlink" href="#azure-design-principles" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="data-engineering-concepts">
+<h2>Data Engineering Concepts<a class="headerlink" href="#data-engineering-concepts" title="Permalink to this headline">¶</a></h2>
+<a class="reference internal image-reference" href="_images/high-level.png"><img alt="Azure Data Factory Concepts" src="_images/high-level.png" style="width: 600px;" /></a>
 <a class="reference internal image-reference" href="_images/pipelines.png"><img alt="Azure Data Factory Pipelines" src="_images/pipelines.png" style="width: 600px;" /></a>
-<p>This <a class="reference external" href="http://www.sphinx-doc.org">Sphinx</a> theme was designed to provide a great reader experience for
-documentation users on both desktop and mobile devices. This theme is used
-primarily on <a class="reference external" href="http://www.readthedocs.org">Read the Docs</a> but can work with any Sphinx project. You can find
-a working demo of the theme in the <a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/">theme documentation</a></p>
-<div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>This theme is distributed on <a class="reference external" href="https://pypi.python.org/pypi/sphinx_rtd_theme">PyPI</a> and can be installed with <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">$ </span>pip install sphinx-rtd-theme
-</pre></div>
 </div>
-<p>To use the theme in your Sphinx project, you will need to add the following to
-your <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> file:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sphinx_rtd_theme</span>
-
-<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span>
-    <span class="o">...</span>
-    <span class="s2">&quot;sphinx_rtd_theme&quot;</span><span class="p">,</span>
-<span class="p">]</span>
-
-<span class="n">html_theme</span> <span class="o">=</span> <span class="s2">&quot;sphinx_rtd_theme&quot;</span>
-</pre></div>
+<div class="section" id="design-patterns">
+<h2>Design Patterns<a class="headerlink" href="#design-patterns" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Abstract and fully perameratised</p></li>
+<li><p>Reusable code</p></li>
+<li><p>Tested and robust</p></li>
+<li><p>Maintainable</p></li>
+<li><p>Efficient use of resources</p></li>
+</ol>
+<div class="section" id="ingestion">
+<h3>Ingestion<a class="headerlink" href="#ingestion" title="Permalink to this headline">¶</a></h3>
+<p>Standardised and parameterised ingestion templates for every scenario. Allow us to rapidly ingest new datasets with minimal configuration</p>
+<a class="reference internal image-reference" href="_images/ingestion.png"><img alt="Azure Data Factory Ingestion Pipelines" src="_images/ingestion.png" style="width: 600px;" /></a>
 </div>
-<p>For more information read the full documentation on <a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/installing.html">installing the theme</a></p>
+<div class="section" id="utilites">
+<h3>Utilites<a class="headerlink" href="#utilites" title="Permalink to this headline">¶</a></h3>
+<p>Utilities can be reusable code or logic app APIs that allow us to standardise specific functions called across multiple pipelines. Most involve sending data back and forth to systems outside data factory and/or updating configuration files</p>
+<a class="reference internal image-reference" href="_images/utilities.png"><img alt="Azure Data Factory Utility Pipelines" src="_images/utilities.png" style="width: 600px;" /></a>
 </div>
-<div class="section" id="configuration">
-<h2>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
-<p>This theme is highly customizable on both the page level and on a global level.
-To see all the possible configuration options, read the documentation on
-<a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/configuring.html">configuring the theme</a>.</p>
 </div>
-<div class="section" id="contributing">
-<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h2>
-<p>If you would like to help modify or translate the theme, you’ll find more
-information on contributing in our <a class="reference external" href="https://sphinx-rtd-theme.readthedocs.io/en/latest/contributing.html">contributing guide</a>.</p>
+<div class="section" id="config-as-code">
+<h2>Config as Code<a class="headerlink" href="#config-as-code" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>All pipelines are controlled from a JSON configuration file</p></li>
+<li><p>Centralises the orchestration</p></li>
+<li><p>Avoids config mismatches between activities</p></li>
+<li><p>Adds git version control</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/config-as-code.png"><img alt="Config as Code" src="_images/config-as-code.png" style="width: 600px;" /></a>
+<div class="section" id="docs-as-code">
+<h3>Docs as Code<a class="headerlink" href="#docs-as-code" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Principle that you should be writing documentation with the same tools as your code</p></li>
+<li><p>Take it one step further - documentation is auto generated from the code</p></li>
+<li><p>No way for documentation to be outdated or misaligned</p></li>
+</ol>
+<a class="reference internal image-reference" href="_images/doc-as-code.png"><img alt="Documentation as Code" src="_images/doc-as-code.png" style="width: 600px;" /></a>
+</div>
 </div>
 </div>
 
