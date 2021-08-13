@@ -100,6 +100,9 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="designprinciples.html">Design Principles</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Azure DataLake to Pandas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#metadata">Metadata</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#imports">Imports</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#download">Download</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#upload">Upload</a></li>
 </ul>
 </li>
@@ -180,18 +183,89 @@
             
   <div class="section" id="azure-datalake-to-pandas">
 <h1>Azure DataLake to Pandas<a class="headerlink" href="#azure-datalake-to-pandas" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="metadata">
+<h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin python3</span>
+
+<span class="c1"># -------------------------------------------------------------------------</span>
+<span class="c1"># Copyright (c) 2021 NHS England and NHS Improvement. All rights reserved.</span>
+<span class="c1"># Licensed under the MIT License. See license.txt in the project root for</span>
+<span class="c1"># license information.</span>
+<span class="c1"># -------------------------------------------------------------------------</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">FILE:           pandas2adl.py</span>
+<span class="sd">DESCRIPTION:</span>
+<span class="sd">                pandas2adl func app</span>
+<span class="sd">USAGE:</span>
+<span class="sd">                ...</span>
+<span class="sd">CONTRIBUTORS:   Craig Shenton, Mattia Ficarelli</span>
+<span class="sd">CONTACT:        data@nhsx.nhs.uk</span>
+<span class="sd">CREATED:        09 Aug 2021</span>
+<span class="sd">VERSION:        0.0.1</span>
+<span class="sd">&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="imports">
+<h2>Imports<a class="headerlink" href="#imports" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Imports</span>
+<span class="c1"># -------------------------------------------------------------------------</span>
+
+<span class="c1"># Python:</span>
+<span class="kn">import</span> <span class="nn">io</span>
+
+<span class="c1"># 3rd party:</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">azure.storage.filedatalake</span> <span class="kn">import</span> <span class="n">DataLakeServiceClient</span>
+
+<span class="c1"># Internal:</span>
+<span class="kn">import</span> <span class="nn">azure.functions</span> <span class="k">as</span> <span class="nn">func</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="download">
+<h2>Download<a class="headerlink" href="#download" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Download from Azure datalake to pandas dataframe</span>
+<span class="c1"># -------------------------------------------------------------------------</span>
+<span class="n">FILE_PATH</span> <span class="o">=</span> <span class="s2">&quot;folder/&quot;</span>
+<span class="n">FILE_NAME</span> <span class="o">=</span> <span class="s2">&quot;file.csv&quot;</span>
+<span class="n">FS</span> <span class="o">=</span> <span class="s2">&quot;adl_file_system&quot;</span>
+<span class="c1"># !env from func application settings</span>
+<span class="n">CONNECTION_STRING</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;CONNECTION_STRING&quot;</span><span class="p">)</span>
+
+<span class="n">service_client</span> <span class="o">=</span> <span class="n">DataLakeServiceClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="n">CONNECTION_STRING</span><span class="p">)</span>
+<span class="n">file_system_client</span> <span class="o">=</span> <span class="n">service_client</span><span class="o">.</span><span class="n">get_file_system_client</span><span class="p">(</span><span class="n">file_system</span><span class="o">=</span><span class="n">FS</span><span class="p">)</span>
+<span class="n">directory_client</span> <span class="o">=</span> <span class="n">file_system_client</span><span class="o">.</span><span class="n">get_directory_client</span><span class="p">(</span><span class="n">FILE_PATH</span><span class="p">)</span>
+<span class="n">file_client</span> <span class="o">=</span> <span class="n">directory_client</span><span class="o">.</span><span class="n">get_file_client</span><span class="p">(</span><span class="n">FILE_NAME</span><span class="p">)</span>
+<span class="n">download</span> <span class="o">=</span> <span class="n">file_client</span><span class="o">.</span><span class="n">download_file</span><span class="p">()</span>
+<span class="n">downloaded_bytes</span> <span class="o">=</span> <span class="n">download</span><span class="o">.</span><span class="n">readall</span><span class="p">()</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">downloaded_bytes</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
 <div class="section" id="upload">
 <h2>Upload<a class="headerlink" href="#upload" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>path = &quot;/folder/&quot;
-file_name = &quot;file.csv&quot;
-​
-file_system_client.create_directory(path)
-directory_client = file_system_client.get_directory_client(path)
-file_client = directory_client.create_file(file_name)
-file_contents = io.BytesIO()
-df.to_csv(file_contents)
-file_length = file_contents.tell()
-file_client.upload_data(file_contents.getvalue(), length=file_length, overwrite=True)
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Upload pandas dataframe to Azure datalake</span>
+<span class="c1"># -------------------------------------------------------------------------</span>
+<span class="n">FILE_PATH</span> <span class="o">=</span> <span class="s2">&quot;folder/&quot;</span>
+<span class="n">FILE_NAME</span> <span class="o">=</span> <span class="s2">&quot;file.csv&quot;</span>
+<span class="n">FS</span> <span class="o">=</span> <span class="s2">&quot;adl_file_system&quot;</span>
+<span class="c1"># !env from func application settings</span>
+<span class="n">CONNECTION_STRING</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getenv</span><span class="p">(</span><span class="s2">&quot;CONNECTION_STRING&quot;</span><span class="p">)</span>
+
+<span class="n">service_client</span> <span class="o">=</span> <span class="n">DataLakeServiceClient</span><span class="o">.</span><span class="n">from_connection_string</span><span class="p">(</span><span class="n">CONNECTION_STRING</span><span class="p">)</span>
+<span class="n">file_system_client</span> <span class="o">=</span> <span class="n">service_client</span><span class="o">.</span><span class="n">get_file_system_client</span><span class="p">(</span><span class="n">file_system</span><span class="o">=</span><span class="n">FS</span><span class="p">)</span>
+<span class="n">directory_client</span> <span class="o">=</span> <span class="n">file_system_client</span><span class="o">.</span><span class="n">get_directory_client</span><span class="p">(</span><span class="n">FILE_PATH</span><span class="p">)</span>
+<span class="n">file_client</span> <span class="o">=</span> <span class="n">directory_client</span><span class="o">.</span><span class="n">create_file</span><span class="p">(</span><span class="n">FILE_NAME</span><span class="p">)</span>
+
+<span class="n">file_contents</span> <span class="o">=</span> <span class="n">io</span><span class="o">.</span><span class="n">BytesIO</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">file_contents</span><span class="p">)</span>
+<span class="n">file_length</span> <span class="o">=</span> <span class="n">file_contents</span><span class="o">.</span><span class="n">tell</span><span class="p">()</span>
+<span class="n">file_client</span><span class="o">.</span><span class="n">upload_data</span><span class="p">(</span>
+  <span class="n">file_contents</span><span class="o">.</span><span class="n">getvalue</span><span class="p">(),</span>
+  <span class="n">length</span><span class="o">=</span><span class="n">file_length</span><span class="p">,</span>
+  <span class="n">overwrite</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
