@@ -168,7 +168,7 @@
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/pandasadl.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/pandas2adl.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -183,6 +183,7 @@
             
   <div class="section" id="azure-datalake-to-pandas">
 <h1>Azure DataLake to Pandas<a class="headerlink" href="#azure-datalake-to-pandas" title="Permalink to this headline">¶</a></h1>
+<p>Azure function app to pull/push Azure Datalake files to <code class="docutils literal notranslate"><span class="pre">pandas</span></code> dataframe in memory. To avoid the 500mb limit of the <code class="docutils literal notranslate"><span class="pre">tmp/</span></code> folder.</p>
 <div class="section" id="metadata">
 <h2>Metadata<a class="headerlink" href="#metadata" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin python3</span>
@@ -213,6 +214,7 @@
 <span class="c1"># -------------------------------------------------------------------------</span>
 
 <span class="c1"># Python:</span>
+<span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">io</span>
 
 <span class="c1"># 3rd party:</span>
