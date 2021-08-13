@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Changelog &mdash; NHSX Data Engineering 0.0.1 documentation</title>
+  <title>Azure DataLake to Pandas &mdash; NHSX Data Engineering 0.0.1 documentation</title>
   
 
   
@@ -43,7 +43,8 @@
     
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Open Analytics Template" href="openanalyticstemplate.html" /> 
+    <link rel="next" title="Open Analytics Template" href="openanalyticstemplate.html" />
+    <link rel="prev" title="Design Principles" href="designprinciples.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -96,25 +97,20 @@
             
             
               <p class="caption"><span class="caption-text">Data Engineering</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="designprinciples.html">Design Principles</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pandasadl.html">Azure DataLake to Pandas</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Azure DataLake to Pandas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#upload">Upload</a></li>
+</ul>
+</li>
 </ul>
 <p class="caption"><span class="caption-text">Open Analytics</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="openanalyticstemplate.html">Open Analytics Template</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Appendix</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#v0-0-1">v0.0.1</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#new-features">New Features</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#fixes">Fixes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#other-changes">Other Changes</a></li>
-</ul>
-</li>
-</ul>
-</li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a></li>
 </ul>
 
             
@@ -163,13 +159,13 @@
     
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
         
-      <li>Changelog</li>
+      <li>Azure DataLake to Pandas</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
           
-            <a href="_sources/changelog.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/pandasadl.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -182,27 +178,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="changelog">
-<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="v0-0-1">
-<h2>v0.0.1<a class="headerlink" href="#v0-0-1" title="Permalink to this headline">¶</a></h2>
-<dl class="field-list simple">
-<dt class="field-odd">Date</dt>
-<dd class="field-odd"><p>Aug 9, 2021</p>
-</dd>
-</dl>
-<div class="section" id="new-features">
-<h3>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h3>
-<ul class="simple">
-<li><p>Start keeping changelog :)</p></li>
-<li><p>Added Read the Docs - Sphinx theme</p></li>
-</ul>
-</div>
-<div class="section" id="fixes">
-<h3>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h3>
-</div>
-<div class="section" id="other-changes">
-<h3>Other Changes<a class="headerlink" href="#other-changes" title="Permalink to this headline">¶</a></h3>
+  <div class="section" id="azure-datalake-to-pandas">
+<h1>Azure DataLake to Pandas<a class="headerlink" href="#azure-datalake-to-pandas" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="upload">
+<h2>Upload<a class="headerlink" href="#upload" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>path = &quot;/folder/&quot;
+file_name = &quot;file.csv&quot;
+​
+file_system_client.create_directory(path)
+directory_client = file_system_client.get_directory_client(path)
+file_client = directory_client.create_file(file_name)
+file_contents = io.BytesIO()
+df.to_csv(file_contents)
+file_length = file_contents.tell()
+file_client.upload_data(file_contents.getvalue(), length=file_length, overwrite=True)
+</pre></div>
 </div>
 </div>
 </div>
@@ -213,7 +203,8 @@
           </div>
           <footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="openanalyticstemplate.html" class="btn btn-neutral float-left" title="Open Analytics Template" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="openanalyticstemplate.html" class="btn btn-neutral float-right" title="Open Analytics Template" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="designprinciples.html" class="btn btn-neutral float-left" title="Design Principles" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
